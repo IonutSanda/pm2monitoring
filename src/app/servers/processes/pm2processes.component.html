@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <p-table [value]="services"  styleClass="p-datatable-sm p-datatable-gridlines">
+    <ng-template pTemplate="header">
+      <tr class="table-header">
+        <th>Name</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-service>
+      <tr class="table-body">
+        <td [ngClass]="{'online-status': service.pm2_env.status === 'online', 'offline-status': service.pm2_env.status === 'stopped'}">{{ service.name }}</td>
+        <td>{{ service.pm2_env.status }}</td>
+        <td class="action-buttons">
+          <p-button label="Start" styleClass="p-button-success p-button-sm" (click)="onStartPm2Service(service.pm_id)"></p-button>
+          <p-button label="Stop" styleClass="p-button-danger p-button-sm" (click)="onStopPm2Service(service.pm_id)"></p-button>
+          <p-button label="Restart" styleClass="p-button-secondary p-button-sm" (click)="onRestartPm2Service(service.pm_id)"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

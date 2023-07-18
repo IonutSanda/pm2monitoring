@@ -1,0 +1,10 @@
+{
+    "apps" : [{
+      "name"   : "crawler-monitoring",
+      "script" : "./main.js",
+      "autorestart": true,
+      "instances": 1,
+			"node_args": "--max_old_space_size=20000"
+    }]
+  }
+  

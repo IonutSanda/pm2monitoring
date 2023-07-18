@@ -1,0 +1,21 @@
+.wrapper{
+    margin:30px;
+}
+th{
+    text-align: center !important;
+}
+.table-header{
+    border: 1px solid red;
+}
+.online-status{
+    background-color: rgba(123, 231, 141, 0.7);
+}
+.offline-status{
+    background-color: rgba(231, 123, 123, 0.7);
+}
+.action-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: none;
+}
