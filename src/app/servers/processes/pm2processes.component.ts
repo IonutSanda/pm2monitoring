@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
-import { PM2ServiceModel } from 'src/app/models/models';
 import { ManagePm2ProcessesService } from 'src/app/services/manage-pm2-processes.service';
 
 @Component({
@@ -19,7 +17,7 @@ export class Pm2processesComponent implements OnInit {
     })
   }
 
-  private setPm2Services(data: any){
+  private setPm2Services(data: any):void{
     this.services = data;
   }
 
