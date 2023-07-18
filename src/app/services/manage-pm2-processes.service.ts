@@ -19,7 +19,7 @@ export class ManagePm2ProcessesService {
   }
 
   public stopPm2Service(id: number):Subscription{
-    return this.http.get(`${env.API_URL}3000/pm2/${id}/stop`).subscribe();
+    return this.http.get(`${env.API_URL}/pm2/${id}/stop`).subscribe();
   }
 
   public restartPm2Service(id: string):Subscription{
